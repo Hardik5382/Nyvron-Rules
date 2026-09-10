@@ -10,7 +10,7 @@ const UBLOCK_FILTERS_URL: &str = "https://ublockorigin.github.io/uAssets/filters
 const URLHAUS_URL: &str = "https://urlhaus.abuse.ch/downloads/text/";
 
 const OUTPUT_PATH: &str = "latest.nyv";
-const BINARY_MAGIC: &[u8; 8] = b"NYVRONv1"; // Restored your original correct header
+const BINARY_MAGIC: &[u8; 8] = b"NYVRONv1";
 
 #[derive(Debug, Clone)]
 struct ScriptletRule {
@@ -89,7 +89,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let ad_engine = Engine::from_rules(&ad_rules, ParseOptions::default());
     let tracker_engine = Engine::from_rules(&tracker_rules, ParseOptions::default());
 
-    // Restored the serialize_raw() method compatible with version 0.8.2
     let ad_payload = ad_engine.serialize_raw()?;
     let tracker_payload = tracker_engine.serialize_raw()?;
     

@@ -84,9 +84,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let ad_engine = Engine::from_rules(&ad_rules, ParseOptions::default());
     let tracker_engine = Engine::from_rules(&tracker_rules, ParseOptions::default());
 
-    let ad_payload = ad_engine.serialize_raw()?;
-    let tracker_payload = tracker_engine.serialize_raw()?;
-
+    let ad_payload = ad_engine.serialize()?;
+    let tracker_payload = tracker_engine.serialize()?;
+    
     let binary = encode_engine_binary(&ad_payload, &tracker_payload, rule_count);
 
     let mut output = File::create(OUTPUT_PATH)?;

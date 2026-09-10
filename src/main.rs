@@ -1,4 +1,4 @@
-use adblock::lists::{parse_filters, ParseOptions};
+﻿use adblock::lists::{parse_filters, ParseOptions};
 use adblock::Engine;
 use std::collections::HashMap;
 use std::fs::File;
@@ -9,7 +9,8 @@ const EASYPRIVACY_URL: &str = "https://easylist.to/easylist/easyprivacy.txt";
 const UBLOCK_FILTERS_URL: &str = "https://ublockorigin.github.io/uAssets/filters/filters.txt";
 const URLHAUS_URL: &str = "https://urlhaus.abuse.ch/downloads/text/";
 
-const OUTPUT_PATH: &str = "latest.nyv";
+const OUTPUT_PATH: &str = "v2/latest.nyv";
+const BINARY_MAGIC: &[u8; 8] = b"NYVRONv2";
 
 #[derive(Debug, Clone)]
 struct ScriptletRule {
@@ -24,6 +25,9 @@ struct ScriptletEngine {
 impl ScriptletEngine {
     fn new() -> Self {
         Self { rules_by_domain: HashMap::new() }
+    }
+    fn rule_count(&self) -> usize {
+        self.rules_by_domain.values().map(Vec::len).sum()
     }
     fn add_rule(&mut self, line: &str) {
         let parts: Vec<&str> = line.split("##+js(").collect();
@@ -53,26 +57,28 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let ad_rules = collect_rules(&[&easylist, &ublock_filters], &mut scriptlets);
     let tracker_rules = collect_rules(&[&easyprivacy, &urlhaus], &mut scriptlets);
 
+    let (ad_network, ad_cosmetic) = parse_filters(&ad_rules, false, ParseOptions::default());
+    let (tracker_network, tracker_cosmetic) =
+        parse_filters(&tracker_rules, false, ParseOptions::default());
+
+    let rule_count =
+        (ad_network.len() + ad_cosmetic.len() + tracker_network.len() + tracker_cosmetic.len())
+            as u64;
+
     let ad_engine = Engine::from_rules(&ad_rules, ParseOptions::default());
     let tracker_engine = Engine::from_rules(&tracker_rules, ParseOptions::default());
 
     let ad_payload = ad_engine.serialize();
     let tracker_payload = tracker_engine.serialize();
-    
-    // EXACT V2 Envelope: 2u8 marker + u32 lengths + payloads
-    let mut envelope = Vec::new();
-    envelope.push(2u8); 
-    
-    envelope.extend_from_slice(&(ad_payload.len() as u32).to_le_bytes());
-    envelope.extend_from_slice(&ad_payload);
-    envelope.extend_from_slice(&(tracker_payload.len() as u32).to_le_bytes());
-    envelope.extend_from_slice(&tracker_payload);
 
+    let binary = encode_engine_binary(&ad_payload, &tracker_payload, rule_count);
+
+    if let Some(parent) = std::path::Path::new(OUTPUT_PATH).parent() { std::fs::create_dir_all(parent)?; }
     let mut output = File::create(OUTPUT_PATH)?;
-    output.write_all(&envelope)?;
+    output.write_all(&binary)?;
     output.sync_all()?;
 
-    println!("Successfully generated V2 latest.nyv ({} bytes)", envelope.len());
+    println!("Successfully generated V2 latest.nyv ({} bytes)", binary.len());
     Ok(())
 }
 
@@ -92,4 +98,18 @@ fn collect_rules(sources: &[&str], scriptlets: &mut ScriptletEngine) -> Vec<Stri
         }
     }
     rules
+}
+
+fn encode_engine_binary(ad_payload: &[u8], tracker_payload: &[u8], rule_count: u64) -> Vec<u8> {
+    let ad_len = ad_payload.len() as u64;
+    let tracker_len = tracker_payload.len() as u64;
+
+    let mut output = Vec::with_capacity(32 + ad_payload.len() + tracker_payload.len());
+    output.extend_from_slice(BINARY_MAGIC);
+    output.extend_from_slice(&rule_count.to_le_bytes());
+    output.extend_from_slice(&ad_len.to_le_bytes());
+    output.extend_from_slice(&tracker_len.to_le_bytes());
+    output.extend_from_slice(ad_payload);
+    output.extend_from_slice(tracker_payload);
+    output
 }

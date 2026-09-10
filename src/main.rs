@@ -7,11 +7,6 @@ use std::io::Write;
 const EASYLIST_URL: &str = "https://easylist.to/easylist/easylist.txt";
 const EASYPRIVACY_URL: &str = "https://easylist.to/easylist/easyprivacy.txt";
 const UBLOCK_FILTERS_URL: &str = "https://ublockorigin.github.io/uAssets/filters/filters.txt";
-const UBLOCK_UNBREAK_URL: &str = "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt";
-const ADGUARD_ANTI_ADBLOCK_URL: &str = "https://filters.adtidy.org/extension/ublock/filters/3.txt";
-const UBLOCK_PRIVACY_URL: &str = "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt";
-const FANBOY_ANNOYANCES_URL: &str = "https://easylist.to/easylist/fanboy-annoyance.txt";
-const ADGUARD_COOKIES_URL: &str = "https://filters.adtidy.org/extension/ublock/filters/14.txt";
 const URLHAUS_URL: &str = "https://urlhaus.abuse.ch/downloads/text/";
 
 const OUTPUT_PATH: &str = "latest.nyv";
@@ -71,32 +66,18 @@ impl ScriptletEngine {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    println!("Fetching comprehensive filter lists...");
+    println!("Fetching essential high-performance filter lists...");
     
-    // Core Ad Blocking & Site Repair sources
     let easylist = download_rules(EASYLIST_URL).await?;
     let ublock_filters = download_rules(UBLOCK_FILTERS_URL).await?;
-    let ublock_unbreak = download_rules(UBLOCK_UNBREAK_URL).await?;
-    let adguard_anti_adblock = download_rules(ADGUARD_ANTI_ADBLOCK_URL).await?;
-
-    // Privacy, Annoyances, Cookies & Malware sources
     let easyprivacy = download_rules(EASYPRIVACY_URL).await?;
-    let ublock_privacy = download_rules(UBLOCK_PRIVACY_URL).await?;
-    let fanboy_annoyances = download_rules(FANBOY_ANNOYANCES_URL).await?;
-    let adguard_cookies = download_rules(ADGUARD_COOKIES_URL).await?;
     let urlhaus = download_rules(URLHAUS_URL).await?;
 
     let mut scriptlets = ScriptletEngine::new();
 
-    // Group into Ad Engine and Tracker Engine arrays
-    let ad_rules = collect_rules(
-        &[&easylist, &ublock_filters, &ublock_unbreak, &adguard_anti_adblock],
-        &mut scriptlets,
-    );
-    let tracker_rules = collect_rules(
-        &[&easyprivacy, &ublock_privacy, &fanboy_annoyances, &adguard_cookies, &urlhaus],
-        &mut scriptlets,
-    );
+    // Group into Ad Engine and Tracker/Security Engine
+    let ad_rules = collect_rules(&[&easylist, &ublock_filters], &mut scriptlets);
+    let tracker_rules = collect_rules(&[&easyprivacy, &urlhaus], &mut scriptlets);
 
     let (ad_network, ad_cosmetic) = parse_filters(&ad_rules, false, ParseOptions::default());
     let (tracker_network, tracker_cosmetic) =

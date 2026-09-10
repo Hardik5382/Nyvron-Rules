@@ -1,34 +1,30 @@
-name: Update Nyvron Rules
+name: Update Filters
 
 on:
   schedule:
-    - cron: '0 2 * * *'
-  workflow_dispatch:
-
-permissions:
-  contents: write
+    - cron: '0 0 * * *' # Runs daily
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
-  update-rules:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # REQUIRED for the push to succeed
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main
 
-      - name: Install Rust
+      - name: Set up Rust
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Build latest rules
-        run: cargo run --release
+      - name: Compile latest.nyv
+        run: cargo run --release # Or however you run your rust script
 
-      - name: Commit updated binary
+      - name: Commit and Push latest.nyv
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add latest.nyv
-          git diff --cached --quiet && exit 0
-          git commit -m "Update compiled Nyvron rules"
-          git push origin main
+          git commit -m "Update filter rules [skip ci]" || echo "No changes to commit"
+          git push

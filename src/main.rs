@@ -10,7 +10,6 @@ const UBLOCK_FILTERS_URL: &str = "https://ublockorigin.github.io/uAssets/filters
 const URLHAUS_URL: &str = "https://urlhaus.abuse.ch/downloads/text/";
 
 const OUTPUT_PATH: &str = "latest.nyv";
-const BINARY_MAGIC: &[u8; 8] = b"NYVRONv1";
 
 #[derive(Debug, Clone)]
 struct ScriptletRule {
@@ -66,7 +65,7 @@ impl ScriptletEngine {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    println!("Fetching essential high-performance filter lists...");
+    println!("Fetching optimized filter lists...");
     
     let easylist = download_rules(EASYLIST_URL).await?;
     let ublock_filters = download_rules(UBLOCK_FILTERS_URL).await?;
@@ -75,7 +74,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut scriptlets = ScriptletEngine::new();
 
-    // Group into Ad Engine and Tracker/Security Engine
     let ad_rules = collect_rules(&[&easylist, &ublock_filters], &mut scriptlets);
     let tracker_rules = collect_rules(&[&easyprivacy, &urlhaus], &mut scriptlets);
 
@@ -93,16 +91,26 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let ad_payload = ad_engine.serialize();
     let tracker_payload = tracker_engine.serialize();
     
-    let binary = encode_engine_binary(&ad_payload, &tracker_payload, rule_count);
+    // Construct the V2 envelope binary format expected by the Android app
+    let mut envelope = Vec::new();
+    envelope.push(2u8); // V2 version marker byte required by FilterSyncWorker
+    
+    // Write ad payload length (u32) and bytes
+    envelope.extend_from_slice(&(ad_payload.len() as u32).to_le_bytes());
+    envelope.extend_from_slice(&ad_payload);
+
+    // Write tracker payload length (u32) and bytes
+    envelope.extend_from_slice(&(tracker_payload.len() as u32).to_le_bytes());
+    envelope.extend_from_slice(&tracker_payload);
 
     let mut output = File::create(OUTPUT_PATH)?;
-    output.write_all(&binary)?;
+    output.write_all(&envelope)?;
     output.sync_all()?;
 
     println!("Wrote {}", OUTPUT_PATH);
     println!("Network/cosmetic rule count: {}", rule_count);
     println!("Parsed scriptlet rule count: {}", scriptlets.rule_count());
-    println!("Binary size: {} bytes", binary.len());
+    println!("Binary size: {} bytes", envelope.len());
 
     Ok(())
 }
@@ -138,18 +146,4 @@ fn collect_rules(sources: &[&str], scriptlets: &mut ScriptletEngine) -> Vec<Stri
     }
 
     rules
-}
-
-fn encode_engine_binary(ad_payload: &[u8], tracker_payload: &[u8], rule_count: u64) -> Vec<u8> {
-    let ad_len = ad_payload.len() as u64;
-    let tracker_len = tracker_payload.len() as u64;
-
-    let mut output = Vec::with_capacity(32 + ad_payload.len() + tracker_payload.len());
-    output.extend_from_slice(BINARY_MAGIC);
-    output.extend_from_slice(&rule_count.to_le_bytes());
-    output.extend_from_slice(&ad_len.to_le_bytes());
-    output.extend_from_slice(&tracker_len.to_le_bytes());
-    output.extend_from_slice(ad_payload);
-    output.extend_from_slice(tracker_payload);
-    output
 }

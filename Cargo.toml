@@ -1,9 +1,12 @@
+[toolchain]
+channel = "1.63.0"
+
 [package]
 name = "nyvron-rules"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-adblock = "=0.8.2" # Matches your Android app's native engine perfectly!
+adblock = "=0.8.2"
 reqwest = { version = "0.11", features = ["rustls-tls", "gzip", "brotli", "deflate"] }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }

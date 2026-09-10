@@ -4,9 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-adblock = "=0.8.2" # Strictly matches your Android app's version!
+adblock = "=0.8.2" # Matches your Android app's native engine perfectly!
 reqwest = { version = "0.11", features = ["rustls-tls", "gzip", "brotli", "deflate"] }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
-
-[patch.crates-io]
-rmp-serde = { git = "https://github.com/3Hren/msgpack-rust", rev = "d6c6c672740fc" }

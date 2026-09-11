@@ -1,0 +1,106 @@
+{
+  "apps": [
+    {
+      "title": "X (Twitter)",
+      "url": "https://x.com",
+      "category": "SOCIAL",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/x-twitter.webp"
+    },
+    {
+      "title": "Reddit",
+      "url": "https://www.reddit.com",
+      "category": "SOCIAL",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/reddit.webp"
+    },
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com",
+      "category": "SOCIAL",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/instagram.webp"
+    },
+    {
+      "title": "Discord",
+      "url": "https://discord.com/app",
+      "category": "SOCIAL",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/discord.webp"
+    },
+    {
+      "title": "Facebook",
+      "url": "https://m.facebook.com",
+      "category": "SOCIAL",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/facebook.webp"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com",
+      "category": "SOCIAL",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/linkedin.webp"
+    },
+    {
+      "title": "YouTube",
+      "url": "https://m.youtube.com",
+      "category": "VIDEO",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/youtube.webp"
+    },
+    {
+      "title": "Twitch",
+      "url": "https://m.twitch.tv",
+      "category": "VIDEO",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/twitch.webp"
+    },
+    {
+      "title": "TikTok",
+      "url": "https://www.tiktok.com",
+      "category": "VIDEO",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/tiktok.webp"
+    },
+    {
+      "title": "DuckDuckGo",
+      "url": "https://duckduckgo.com",
+      "category": "SEARCH",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/duckduckgo.webp"
+    },
+    {
+      "title": "Google",
+      "url": "https://www.google.com",
+      "category": "SEARCH",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/google.webp"
+    },
+    {
+      "title": "GitHub",
+      "url": "https://github.com",
+      "category": "PRODUCTIVITY",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/github.webp"
+    },
+    {
+      "title": "Notion",
+      "url": "https://www.notion.so",
+      "category": "PRODUCTIVITY",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/notion.webp"
+    },
+    {
+      "title": "Wikipedia",
+      "url": "https://en.m.wikipedia.org",
+      "category": "REFERENCE",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/wikipedia.webp"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "category": "NEWS",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/hacker-news.webp"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news",
+      "category": "NEWS",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/bbc-news.webp"
+    },
+    {
+      "title": "Spotify",
+      "url": "https://open.spotify.com",
+      "category": "OTHER",
+      "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/spotify.webp"
+    }
+  ]
+}

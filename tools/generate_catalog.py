@@ -7,7 +7,6 @@ import io
 import json
 import re
 import sys
-from html import unescape
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urljoin, urlparse
@@ -26,6 +25,21 @@ ICONS_DIR = ROOT / "icons"
 CATALOG_PATH = ROOT / "catalog" / "webapps.json"
 USER_AGENT = "Nyvron-Catalog-Generator/1.0"
 MAX_DOWNLOAD_BYTES = 8 * 1024 * 1024
+DASHBOARD_ICONS_ROOT = "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png"
+
+# Catalog IDs stay stable for Nyvron. Values here follow Dashboard Icons slugs.
+DASHBOARD_ICON_ALIASES = {
+    "twitter": ("x", "twitter"),
+    "google_docs": ("google-docs",),
+    "google_drive": ("google-drive",),
+    "google_sheets": ("google-sheets",),
+    "stackoverflow": ("stack-overflow",),
+    "chatgpt": ("chatgpt", "openai"),
+    "archive_org": ("internet-archive",),
+    "hackernews": ("hacker-news",),
+    "theverge": ("the-verge",),
+    "yahoofinance": ("yahoo-finance",),
+}
 
 APPS_CONFIG = (
     # Social & Messaging
@@ -93,12 +107,9 @@ APPS_CONFIG = (
     {"id": "yahoofinance", "title": "Yahoo Finance", "url": "https://finance.yahoo.com", "category": "OTHER"},
 )
 
-ICON_LINK_RE = re.compile(
-    r"<link\b(?=[^>]*\brel\s*=\s*['\"][^'\"]*(?:apple-touch-icon|icon)[^'\"]*['\"])[^>]*>",
-    re.IGNORECASE,
-)
+LINK_RE = re.compile(r"<link\b[^>]*>", re.IGNORECASE)
 HREF_RE = re.compile(r"\bhref\s*=\s*(['\"])(.*?)\1", re.IGNORECASE)
-SIZES_RE = re.compile(r"\bsizes\s*=\s*(['\"])(.*?)\1", re.IGNORECASE)
+REL_RE = re.compile(r"\brel\s*=\s*(['\"])(.*?)\1", re.IGNORECASE)
 
 
 def fetch(url: str) -> tuple[bytes, str]:
@@ -113,72 +124,97 @@ def fetch(url: str) -> tuple[bytes, str]:
         return data, response.headers.get_content_type()
 
 
-def icon_candidates(page_url: str) -> list[str]:
-    candidates: list[tuple[int, str]] = []
+def dashboard_icon_urls(app_id: str) -> list[str]:
+    slugs = DASHBOARD_ICON_ALIASES.get(app_id, (app_id.replace("_", "-"),))
+    return [f"{DASHBOARD_ICONS_ROOT}/{slug}.png" for slug in dict.fromkeys(slugs)]
+
+
+def manifest_urls(page_url: str) -> list[str]:
+    discovered: list[str] = []
     try:
         page_bytes, _ = fetch(page_url)
         html = page_bytes.decode("utf-8", errors="replace")
-        for link in ICON_LINK_RE.findall(html):
+        for link in LINK_RE.findall(html):
+            rel_match = REL_RE.search(link)
             href_match = HREF_RE.search(link)
-            if not href_match:
+            if not href_match or not rel_match or "manifest" not in rel_match.group(2).lower().split():
                 continue
-            href = unescape(href_match.group(2).strip())
-            size_match = SIZES_RE.search(link)
-            dimensions = [int(value) for value in re.findall(r"(\d+)x\d+", size_match.group(2) if size_match else "")]
-            candidates.append((max(dimensions, default=0), urljoin(page_url, href)))
+            discovered.append(urljoin(page_url, href_match.group(2).strip()))
     except (HTTPError, URLError, TimeoutError, ValueError) as exc:
-        print(f"  page icon discovery failed: {exc}", file=sys.stderr)
-
-    candidates.sort(key=lambda item: item[0], reverse=True)
+        print(f"  manifest discovery failed: {exc}", file=sys.stderr)
     origin = urlparse(page_url)
-    domain = origin.hostname or ""
+    discovered.extend((
+        f"{origin.scheme}://{origin.netloc}/manifest.json",
+        f"{origin.scheme}://{origin.netloc}/site.webmanifest",
+    ))
+    return list(dict.fromkeys(discovered))
+
+
+def manifest_icon_urls(page_url: str) -> list[str]:
+    candidates: list[tuple[int, str]] = []
+    for manifest_url in manifest_urls(page_url):
+        try:
+            manifest_bytes, _ = fetch(manifest_url)
+            manifest = json.loads(manifest_bytes.decode("utf-8-sig"))
+            for icon in manifest.get("icons", []):
+                src = icon.get("src")
+                if not isinstance(src, str) or not src.strip():
+                    continue
+                declared_sizes = [
+                    min(int(width), int(height))
+                    for width, height in re.findall(r"(\d+)x(\d+)", str(icon.get("sizes", "")))
+                ]
+                largest_size = max(declared_sizes, default=0)
+                if largest_size >= 192 or str(icon.get("sizes", "")).lower() == "any":
+                    candidates.append((largest_size, urljoin(manifest_url, src.strip())))
+        except (HTTPError, URLError, TimeoutError, ValueError, TypeError, json.JSONDecodeError) as exc:
+            print(f"  unusable manifest {manifest_url}: {exc}", file=sys.stderr)
+    candidates.sort(key=lambda item: item[0], reverse=True)
+    return list(dict.fromkeys(url for _, url in candidates))
+
+
+def google_icon_urls(page_url: str) -> list[str]:
+    domain = urlparse(page_url).hostname or ""
     domain_parts = domain.split(".")
     parent_domain = ".".join(domain_parts[-2:]) if len(domain_parts) > 2 else domain
-    discovered = [url for _, url in candidates]
-    discovered.extend(
-        (
-            f"{origin.scheme}://{origin.netloc}/apple-touch-icon.png",
-            f"https://www.google.com/s2/favicons?domain={quote(domain)}&sz=256",
-            f"https://www.google.com/s2/favicons?domain={quote(parent_domain)}&sz=256",
-        )
-    )
-    return list(dict.fromkeys(discovered))
+    return list(dict.fromkeys((
+        f"https://www.google.com/s2/favicons?domain={quote(domain)}&sz=256",
+        f"https://www.google.com/s2/favicons?domain={quote(parent_domain)}&sz=256",
+    )))
+
+
+def image_resolution(source: bytes) -> int:
+    with Image.open(io.BytesIO(source)) as image:
+        image.load()
+        return min(image.width, image.height)
 
 
 def convert_to_webp(source: bytes, destination: Path) -> None:
     with Image.open(io.BytesIO(source)) as image:
         image.load()
         image = image.convert("RGBA")
-        image.thumbnail((256, 256), Image.Resampling.LANCZOS)
-        canvas = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
-        canvas.alpha_composite(image, ((256 - image.width) // 2, (256 - image.height) // 2))
-        canvas.save(destination, "WEBP", quality=92, method=6)
+        image = image.resize((256, 256), Image.Resampling.LANCZOS)
+        image.save(destination, "WEBP", quality=95, method=6)
 
 
-def build_icon(title: str, page_url: str, filename: str) -> None:
-    destination = ICONS_DIR / f"{filename}.webp"
+def download_and_convert_webp(app_id: str, title: str, page_url: str, destination: Path) -> None:
     failures: list[str] = []
-    best_image: bytes | None = None
-    best_candidate = ""
-    best_resolution = 0
-    for candidate in icon_candidates(page_url):
-        try:
-            image_bytes, _ = fetch(candidate)
-            with Image.open(io.BytesIO(image_bytes)) as image:
-                image.load()
-                resolution = min(image.width, image.height)
-            if resolution > best_resolution:
-                best_image = image_bytes
-                best_candidate = candidate
-                best_resolution = resolution
-            if best_resolution >= 256:
-                break
-        except (HTTPError, URLError, TimeoutError, ValueError, OSError) as exc:
-            failures.append(f"{candidate}: {exc}")
-    if best_image is None:
-        raise RuntimeError(f"No usable icon found for {title}: {'; '.join(failures)}")
-    convert_to_webp(best_image, destination)
-    print(f"  {title}: {best_candidate} ({best_resolution}px source)")
+    source_tiers = (
+        ("dashboard-icons", lambda: dashboard_icon_urls(app_id)),
+        ("web-manifest", lambda: manifest_icon_urls(page_url)),
+        ("google-favicon", lambda: google_icon_urls(page_url)),
+    )
+    for source_name, load_candidates in source_tiers:
+        for candidate in load_candidates():
+            try:
+                image_bytes, _ = fetch(candidate)
+                resolution = image_resolution(image_bytes)
+                convert_to_webp(image_bytes, destination)
+                print(f"  {title}: {source_name} {candidate} ({resolution}px source)")
+                return
+            except (HTTPError, URLError, TimeoutError, ValueError, OSError) as exc:
+                failures.append(f"{candidate}: {exc}")
+    raise RuntimeError(f"No usable icon found for {title}: {'; '.join(failures)}")
 
 
 def main() -> None:
@@ -192,7 +228,7 @@ def main() -> None:
         title = app["title"]
         url = app["url"]
         category = app["category"]
-        build_icon(title, url, filename)
+        download_and_convert_webp(filename, title, url, ICONS_DIR / f"{filename}.webp")
         catalog_apps.append(
             {
                 "title": title,

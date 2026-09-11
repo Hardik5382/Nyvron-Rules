@@ -1,4 +1,4 @@
-﻿name: Update Nyvron Rules
+name: Update Nyvron Rules
 
 on:
   schedule:
@@ -32,3 +32,7 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Update compiled Nyvron rules v2"
           git push origin main
+
+      - name: Purge jsDelivr Cache
+        run: |
+          curl --fail-with-body -sS -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/v2/latest.nyv"

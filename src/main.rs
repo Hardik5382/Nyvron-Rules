@@ -9,7 +9,7 @@ const EASYPRIVACY_URL: &str = "https://easylist.to/easylist/easyprivacy.txt";
 const UBLOCK_FILTERS_URL: &str = "https://ublockorigin.github.io/uAssets/filters/filters.txt";
 const URLHAUS_URL: &str = "https://urlhaus.abuse.ch/downloads/text/";
 
-const OUTPUT_PATH: &str = "v2/latest.nyv";
+const OUTPUT_PATH: &str = "v2/latest-v0.12.5.nyv";
 const BINARY_MAGIC: &[u8; 8] = b"NYVRONv2";
 
 #[derive(Debug, Clone)]
@@ -113,3 +113,4 @@ fn encode_engine_binary(ad_payload: &[u8], tracker_payload: &[u8], rule_count: u
     output.extend_from_slice(tracker_payload);
     output
 }
+

@@ -1,4 +1,4 @@
-name: Update Nyvron Rules
+﻿name: Update Nyvron Rules
 
 on:
   schedule:
@@ -28,11 +28,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add v2/latest.nyv
+          git add v2/latest-v0.12.5.nyv
           git diff --cached --quiet && exit 0
           git commit -m "Update compiled Nyvron rules v2"
           git push origin main
 
       - name: Purge jsDelivr Cache
         run: |
-          curl --fail-with-body -sS -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/v2/latest.nyv"
+          curl --fail-with-body -sS -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/v2/latest-v0.12.5.nyv"
+

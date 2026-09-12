@@ -1,14 +1,17 @@
-﻿use adblock::lists::{parse_filters, ParseOptions};
+use adblock::lists::{parse_filters, ParseOptions};
 use adblock::Engine;
+use sha2::{Digest, Sha256};
 use std::fs::File;
 use std::io::Write;
 
 const EASYLIST_URL: &str = "https://easylist.to/easylist/easylist.txt";
 const EASYPRIVACY_URL: &str = "https://easylist.to/easylist/easyprivacy.txt";
 const UBLOCK_FILTERS_URL: &str = "https://ublockorigin.github.io/uAssets/filters/filters.txt";
-const UBLOCK_QUICK_FIXES_URL: &str = "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt";
+const UBLOCK_QUICK_FIXES_URL: &str =
+    "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt";
 
 const OUTPUT_PATH: &str = "v2/latest-v0.12.5.nyv";
+const SIGNATURE_PATH: &str = "v2/latest-v0.12.5.nyv.sha256";
 const BINARY_MAGIC: &[u8; 8] = b"NYVRONv2";
 
 #[tokio::main]
@@ -36,7 +39,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let ad_payload = ad_engine.serialize();
     let tracker_payload = tracker_engine.serialize();
 
-    let scriptlet_rules = ad_rules.iter().chain(tracker_rules.iter())
+    let scriptlet_rules = ad_rules
+        .iter()
+        .chain(tracker_rules.iter())
         .filter(|rule| rule.contains("##+js("))
         .cloned()
         .collect::<Vec<_>>()
@@ -48,17 +53,32 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         scriptlet_rules.as_bytes(),
     );
 
-    if let Some(parent) = std::path::Path::new(OUTPUT_PATH).parent() { std::fs::create_dir_all(parent)?; }
+    if let Some(parent) = std::path::Path::new(OUTPUT_PATH).parent() {
+        std::fs::create_dir_all(parent)?;
+    }
     let mut output = File::create(OUTPUT_PATH)?;
     output.write_all(&binary)?;
     output.sync_all()?;
 
-    println!("Successfully generated V2 latest.nyv ({} bytes)", binary.len());
+    let signature = format!("{:x}", Sha256::digest(&binary));
+    let mut signature_output = File::create(SIGNATURE_PATH)?;
+    signature_output.write_all(signature.as_bytes())?;
+    signature_output.sync_all()?;
+
+    println!(
+        "Successfully generated V2 latest.nyv ({} bytes, sha256={signature})",
+        binary.len()
+    );
     Ok(())
 }
 
 async fn download_rules(url: &str) -> Result<String, Box<dyn std::error::Error>> {
-    let response = reqwest::Client::new().get(url).header("User-Agent", "Nyvron-Compiler/1.0").send().await?.error_for_status()?;
+    let response = reqwest::Client::new()
+        .get(url)
+        .header("User-Agent", "Nyvron-Compiler/1.0")
+        .send()
+        .await?
+        .error_for_status()?;
     Ok(response.text().await?)
 }
 
@@ -67,7 +87,9 @@ fn collect_rules(sources: &[&str]) -> Vec<String> {
     for source in sources {
         for line in source.lines() {
             let trimmed = line.trim();
-            if trimmed.is_empty() || trimmed.starts_with('!') { continue; }
+            if trimmed.is_empty() || trimmed.starts_with('!') {
+                continue;
+            }
             rules.push(trimmed.to_string());
         }
     }
@@ -97,4 +119,3 @@ fn encode_engine_binary(
     }
     output
 }
-

@@ -1,0 +1,6 @@
+﻿{
+  "version": 1,
+  "catalog_url": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/webapps.json",
+  "filters_url": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/cdn/v1/filters.bin",
+  "engine_version": "0.13.3"
+}

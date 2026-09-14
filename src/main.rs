@@ -25,16 +25,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let ad_rules = collect_rules(&[&easylist, &ublock_filters, &ublock_quick_fixes]);
     let tracker_rules = collect_rules(&[&easyprivacy]);
 
-    
-    let (tracker_network, tracker_cosmetic) =
-        parse_filters(&tracker_rules, false, ParseOptions::default());
+    let rule_count = (ad_rules.len() + tracker_rules.len()) as u64;
 
-    let rule_count =
-        (ad_network.len() + ad_cosmetic.len() + tracker_network.len() + tracker_cosmetic.len())
-            as u64;
-
-    let ad_engine = Engine::new_with_list_text(ad_rules.join("`n"));
-    let tracker_engine = Engine::new_with_list_text(tracker_rules.join("`n"));
+    let ad_engine = Engine::new_with_list_text(&ad_rules.join("\n"));
+    let tracker_engine = Engine::new_with_list_text(&tracker_rules.join("\n"));
 
     let ad_payload = ad_engine.serialize();
     let tracker_payload = tracker_engine.serialize();
@@ -66,7 +60,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     signature_output.sync_all()?;
 
     println!(
-        "Successfully generated V2 latest.nyv ({} bytes, sha256={signature})",
+        "Successfully generated filters.bin ({} bytes, sha256={signature})",
         binary.len()
     );
     Ok(())

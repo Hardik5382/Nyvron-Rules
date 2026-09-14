@@ -1,165 +1,977 @@
 {
-  "apps": [
-    { "title": "AI Chat", "url": "https://chatgpt.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/chatgpt.webp" },
-    { "title": "Smart Assistant", "url": "https://claude.ai", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/claude.webp" },
-    { "title": "AI Search", "url": "https://www.perplexity.ai", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/perplexity.webp" },
-    { "title": "AI Studio", "url": "https://gemini.google.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/gemini.webp" },
-    { "title": "AI Art", "url": "https://www.midjourney.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/midjourney.webp" },
-    { "title": "AI Hub", "url": "https://huggingface.co", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/huggingface.webp" },
-
-    { "title": "Microblog", "url": "https://x.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/twitter.webp" },
-    { "title": "Forums", "url": "https://www.reddit.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/reddit.webp" },
-    { "title": "Photo Stream", "url": "https://www.instagram.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/instagram.webp" },
-    { "title": "Text Stream", "url": "https://www.threads.net", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/threads.webp" },
-    { "title": "Professional Network", "url": "https://www.linkedin.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/linkedin.webp" },
-    { "title": "Idea Board", "url": "https://www.pinterest.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/pinterest.webp" },
-    { "title": "Mastodon", "url": "https://mastodon.social", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/mastodon.webp" },
-    { "title": "Bluesky", "url": "https://bsky.app", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/bluesky.webp" },
-    { "title": "Quora", "url": "https://www.quora.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/quora.webp" },
-    { "title": "Tumblr", "url": "https://www.tumblr.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/tumblr.webp" },
-    { "title": "VK", "url": "https://vk.com", "category": "Social", "region": "EU/RU", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/vk.webp" },
-
-    { "title": "Video Hub", "url": "https://m.youtube.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/youtube.webp" },
-    { "title": "Live Streams", "url": "https://m.twitch.tv", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/twitch.webp" },
-    { "title": "Creator Videos", "url": "https://vimeo.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/vimeo.webp" },
-    { "title": "Streaming TV", "url": "https://www.hotstar.com", "category": "Video & Entertainment", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/hotstar.webp" },
-    { "title": "Anime Stream", "url": "https://www.crunchyroll.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/crunchyroll.webp" },
-    { "title": "Rumble", "url": "https://rumble.com", "category": "Video & Entertainment", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/rumble.webp" },
-    { "title": "Odysee", "url": "https://odysee.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/odysee.webp" },
-    { "title": "Imgur", "url": "https://imgur.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/imgur.webp" },
-
-    { "title": "Spotify", "url": "https://open.spotify.com", "category": "Music & Audio", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/spotify.webp" },
-    { "title": "SoundCloud", "url": "https://m.soundcloud.com", "category": "Music & Audio", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/soundcloud.webp" },
-    { "title": "JioSaavn", "url": "https://www.jiosaavn.com", "category": "Music & Audio", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/jiosaavn.webp" },
-    { "title": "Gaana", "url": "https://gaana.com", "category": "Music & Audio", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/gaana.webp" },
-    { "title": "Wynk Music", "url": "https://wynk.in", "category": "Music & Audio", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/wynk.webp" },
-    { "title": "Pocket Casts", "url": "https://play.pocketcasts.com", "category": "Music & Audio", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/pocketcasts.webp" },
-
-    { "title": "Google Maps", "url": "https://www.google.com/maps", "category": "Navigation & Maps", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/googlemaps.webp" },
-    { "title": "OpenStreetMap", "url": "https://www.openstreetmap.org", "category": "Navigation & Maps", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/openstreetmap.webp" },
-    { "title": "Waze", "url": "https://www.waze.com/live-map", "category": "Navigation & Maps", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/waze.webp" },
-
-    { "title": "AccuWeather", "url": "https://www.accuweather.com", "category": "Weather", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/accuweather.webp" },
-    { "title": "Weather.com", "url": "https://weather.com", "category": "Weather", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/weather.webp" },
-    { "title": "Windy", "url": "https://www.windy.com", "category": "Weather", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/windy.webp" },
-
-    { "title": "Amazon", "url": "https://www.amazon.com", "category": "Shopping", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/amazon.webp" },
-    { "title": "Flipkart", "url": "https://www.flipkart.com", "category": "Shopping", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/flipkart.webp" },
-    { "title": "Myntra", "url": "https://www.myntra.com", "category": "Shopping", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/myntra.webp" },
-    { "title": "AliExpress", "url": "https://m.aliexpress.com", "category": "Shopping", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/aliexpress.webp" },
-    { "title": "eBay", "url": "https://m.ebay.com", "category": "Shopping", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/ebay.webp" },
-    { "title": "Etsy", "url": "https://www.etsy.com", "category": "Shopping", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/etsy.webp" },
-    { "title": "Walmart", "url": "https://www.walmart.com", "category": "Shopping", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/walmart.webp" },
-    { "title": "Target", "url": "https://www.target.com", "category": "Shopping", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/target.webp" },
-    { "title": "IKEA", "url": "https://www.ikea.com", "category": "Shopping", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/ikea.webp" },
-    { "title": "ASOS", "url": "https://www.asos.com", "category": "Shopping", "region": "UK/Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/asos.webp" },
-
-    { "title": "Zomato", "url": "https://www.zomato.com", "category": "Food & Drink", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/zomato.webp" },
-    { "title": "Swiggy", "url": "https://www.swiggy.com", "category": "Food & Drink", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/swiggy.webp" },
-    { "title": "Yelp", "url": "https://www.yelp.com", "category": "Food & Drink", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/yelp.webp" },
-    { "title": "Uber Eats", "url": "https://www.ubereats.com", "category": "Food & Drink", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/ubereats.webp" },
-    { "title": "DoorDash", "url": "https://www.doordash.com", "category": "Food & Drink", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/doordash.webp" },
-    { "title": "Deliveroo", "url": "https://deliveroo.co.uk", "category": "Food & Drink", "region": "UK/EU", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/deliveroo.webp" },
-    { "title": "Foodpanda", "url": "https://www.foodpanda.com", "category": "Food & Drink", "region": "Asia", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/foodpanda.webp" },
-
-    { "title": "MakeMyTrip", "url": "https://www.makemytrip.com", "category": "Travel & Transportation", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/makemytrip.webp" },
-    { "title": "IRCTC", "url": "https://www.irctc.co.in", "category": "Travel & Transportation", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/irctc.webp" },
-    { "title": "Uber", "url": "https://m.uber.com", "category": "Travel & Transportation", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/uber.webp" },
-    { "title": "Ola", "url": "https://www.olacabs.com", "category": "Travel & Transportation", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/ola.webp" },
-    { "title": "Airbnb", "url": "https://www.airbnb.com", "category": "Travel & Transportation", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/airbnb.webp" },
-    { "title": "Booking.com", "url": "https://www.booking.com", "category": "Travel & Transportation", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/booking.webp" },
-    { "title": "Skyscanner", "url": "https://www.skyscanner.com", "category": "Travel & Transportation", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/skyscanner.webp" },
-    { "title": "Agoda", "url": "https://www.agoda.com", "category": "Travel & Transportation", "region": "Asia", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/agoda.webp" },
-    { "title": "Expedia", "url": "https://www.expedia.com", "category": "Travel & Transportation", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/expedia.webp" },
-
-    { "title": "TradingView", "url": "https://www.tradingview.com", "category": "Finance & Crypto", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/tradingview.webp" },
-    { "title": "Yahoo Finance", "url": "https://finance.yahoo.com", "category": "Finance & Crypto", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/yahoofinance.webp" },
-    { "title": "Moneycontrol", "url": "https://www.moneycontrol.com", "category": "Finance & Crypto", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/moneycontrol.webp" },
-    { "title": "CoinMarketCap", "url": "https://coinmarketcap.com", "category": "Finance & Crypto", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/coinmarketcap.webp" },
-    { "title": "CoinGecko", "url": "https://www.coingecko.com", "category": "Finance & Crypto", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/coingecko.webp" },
-    { "title": "PayPal", "url": "https://www.paypal.com", "category": "Finance & Crypto", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/paypal.webp" },
-    { "title": "Investing.com", "url": "https://www.investing.com", "category": "Finance & Crypto", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/investing.webp" },
-
-    { "title": "ProtonMail", "url": "https://mail.proton.me", "category": "Email & Communication", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/protonmail.webp" },
-    { "title": "Fastmail", "url": "https://app.fastmail.com", "category": "Email & Communication", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/fastmail.webp" },
-    { "title": "Tuta", "url": "https://app.tuta.com", "category": "Email & Communication", "region": "EU", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/tuta.webp" },
-    { "title": "Outlook", "url": "https://outlook.live.com", "category": "Email & Communication", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/outlook.webp" },
-
-    { "title": "Notion", "url": "https://www.notion.so", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/notion.webp" },
-    { "title": "Google Keep", "url": "https://keep.google.com", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/googlekeep.webp" },
-    { "title": "Trello", "url": "https://trello.com", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/trello.webp" },
-    { "title": "Todoist", "url": "https://todoist.com/app", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/todoist.webp" },
-    { "title": "Evernote", "url": "https://www.evernote.com", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/evernote.webp" },
-    { "title": "Dropbox", "url": "https://www.dropbox.com", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/dropbox.webp" },
-    { "title": "Google Docs", "url": "https://docs.google.com", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/googledocs.webp" },
-    { "title": "Google Sheets", "url": "https://sheets.google.com", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/googlesheets.webp" },
-    { "title": "Simplenote", "url": "https://app.simplenote.com", "category": "Productivity & Workspace", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/simplenote.webp" },
-
-    { "title": "Figma", "url": "https://www.figma.com", "category": "Design & Creatives", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/figma.webp" },
-    { "title": "Canva", "url": "https://www.canva.com", "category": "Design & Creatives", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/canva.webp" },
-    { "title": "Photopea", "url": "https://www.photopea.com", "category": "Design & Creatives", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/photopea.webp" },
-    { "title": "Dribbble", "url": "https://dribbble.com", "category": "Design & Creatives", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/dribbble.webp" },
-    { "title": "Behance", "url": "https://www.behance.net", "category": "Design & Creatives", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/behance.webp" },
-    { "title": "Excalidraw", "url": "https://excalidraw.com", "category": "Design & Creatives", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/excalidraw.webp" },
-
-    { "title": "GitHub", "url": "https://github.com", "category": "Developer Tools", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/github.webp" },
-    { "title": "GitLab", "url": "https://gitlab.com", "category": "Developer Tools", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/gitlab.webp" },
-    { "title": "Stack Overflow", "url": "https://stackoverflow.com", "category": "Developer Tools", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/stackoverflow.webp" },
-    { "title": "CodePen", "url": "https://codepen.io", "category": "Developer Tools", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/codepen.webp" },
-
-    { "title": "The Verge", "url": "https://www.theverge.com", "category": "Technology", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/theverge.webp" },
-    { "title": "TechCrunch", "url": "https://techcrunch.com", "category": "Technology", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/techcrunch.webp" },
-    { "title": "Hacker News", "url": "https://news.ycombinator.com", "category": "Technology", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/hackernews.webp" },
-    { "title": "Wired", "url": "https://www.wired.com", "category": "Technology", "region": "US/UK", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/wired.webp" },
-    { "title": "Ars Technica", "url": "https://arstechnica.com", "category": "Technology", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/arstechnica.webp" },
-
-    { "title": "BBC News", "url": "https://www.bbc.com/news", "category": "News & Journals", "region": "UK", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/bbc.webp" },
-    { "title": "NDTV", "url": "https://www.ndtv.com", "category": "News & Journals", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/ndtv.webp" },
-    { "title": "The Times of India", "url": "https://timesofindia.indiatimes.com", "category": "News & Journals", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/toi.webp" },
-    { "title": "Reuters", "url": "https://www.reuters.com", "category": "News & Journals", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/reuters.webp" },
-    { "title": "Al Jazeera", "url": "https://www.aljazeera.com", "category": "News & Journals", "region": "Middle East/Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/aljazeera.webp" },
-    { "title": "NPR", "url": "https://www.npr.org", "category": "News & Journals", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/npr.webp" },
-    { "title": "The Guardian", "url": "https://www.theguardian.com", "category": "News & Journals", "region": "UK", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/theguardian.webp" },
-    { "title": "Washington Post", "url": "https://www.washingtonpost.com", "category": "News & Journals", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/washingtonpost.webp" },
-    { "title": "Bloomberg", "url": "https://www.bloomberg.com", "category": "News & Journals", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/bloomberg.webp" },
-
-    { "title": "ESPN", "url": "https://www.espn.com", "category": "Sports", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/espn.webp" },
-    { "title": "Cricbuzz", "url": "https://m.cricbuzz.com", "category": "Sports", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/cricbuzz.webp" },
-    { "title": "Bleacher Report", "url": "https://bleacherreport.com", "category": "Sports", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/bleacherreport.webp" },
-    { "title": "Sky Sports", "url": "https://www.skysports.com", "category": "Sports", "region": "UK", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/skysports.webp" },
-    { "title": "Goal.com", "url": "https://www.goal.com", "category": "Sports", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/goal.webp" },
-
-    { "title": "Goodreads", "url": "https://www.goodreads.com", "category": "Books & Reading", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/goodreads.webp" },
-    { "title": "Wikipedia", "url": "https://en.m.wikipedia.org", "category": "Books & Reading", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/wikipedia.webp" },
-    { "title": "Internet Archive", "url": "https://archive.org", "category": "Books & Reading", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/archive_org.webp" },
-    { "title": "Project Gutenberg", "url": "https://www.gutenberg.org", "category": "Books & Reading", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/gutenberg.webp" },
-    { "title": "Wattpad", "url": "https://www.wattpad.com", "category": "Books & Reading", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/wattpad.webp" },
-    { "title": "Substack", "url": "https://substack.com", "category": "Books & Reading", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/substack.webp" },
-    { "title": "Medium", "url": "https://medium.com", "category": "Books & Reading", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/medium.webp" },
-
-    { "title": "Coursera", "url": "https://www.coursera.org", "category": "Education", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/coursera.webp" },
-    { "title": "Duolingo", "url": "https://www.duolingo.com", "category": "Education", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/duolingo.webp" },
-    { "title": "Khan Academy", "url": "https://www.khanacademy.org", "category": "Education", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/khanacademy.webp" },
-    { "title": "edX", "url": "https://www.edx.org", "category": "Education", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/edx.webp" },
-    { "title": "Quizlet", "url": "https://quizlet.com", "category": "Education", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/quizlet.webp" },
-    { "title": "Codecademy", "url": "https://www.codecademy.com", "category": "Education", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/codecademy.webp" },
-
-    { "title": "IGN", "url": "https://www.ign.com", "category": "Gaming", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/ign.webp" },
-    { "title": "BoardGameGeek", "url": "https://boardgamegeek.com", "category": "Gaming", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/boardgamegeek.webp" },
-    { "title": "GameSpot", "url": "https://www.gamespot.com", "category": "Gaming", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/gamespot.webp" },
-    { "title": "Chess.com", "url": "https://www.chess.com", "category": "Gaming", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/chess.webp" },
-
-    { "title": "MyFitnessPal", "url": "https://www.myfitnesspal.com", "category": "Health & Fitness", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/myfitnesspal.webp" },
-    { "title": "Strava", "url": "https://www.strava.com", "category": "Health & Fitness", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/strava.webp" },
-    { "title": "WebMD", "url": "https://www.webmd.com", "category": "Health & Fitness", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/webmd.webp" },
-    { "title": "Practo", "url": "https://www.practo.com", "category": "Health & Fitness", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/practo.webp" },
-
-    { "title": "DuckDuckGo", "url": "https://duckduckgo.com", "category": "Utilities", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/duckduckgo.webp" },
-    { "title": "Speedtest", "url": "https://www.speedtest.net", "category": "Utilities", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/speedtest.webp" },
-    { "title": "DeepL", "url": "https://www.deepl.com/translator", "category": "Utilities", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/deepl.webp" },
-    { "title": "Google Translate", "url": "https://translate.google.com", "category": "Utilities", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/googletranslate.webp" },
-    { "title": "Bitwarden", "url": "https://vault.bitwarden.com", "category": "Utilities", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/bitwarden.webp" },
-    { "title": "VirusTotal", "url": "https://www.virustotal.com", "category": "Utilities", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/virustotal.webp" }
-  ]
+    "apps":  [
+                 {
+                     "title":  "AI Chat",
+                     "url":  "https://chatgpt.com",
+                     "category":  "AI \u0026 Machine Learning",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/chatgpt.com"
+                 },
+                 {
+                     "title":  "Smart Assistant",
+                     "url":  "https://claude.ai",
+                     "category":  "AI \u0026 Machine Learning",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/claude.ai"
+                 },
+                 {
+                     "title":  "AI Search",
+                     "url":  "https://www.perplexity.ai",
+                     "category":  "AI \u0026 Machine Learning",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/perplexity.ai"
+                 },
+                 {
+                     "title":  "AI Studio",
+                     "url":  "https://gemini.google.com",
+                     "category":  "AI \u0026 Machine Learning",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/gemini.google.com"
+                 },
+                 {
+                     "title":  "AI Art",
+                     "url":  "https://www.midjourney.com",
+                     "category":  "AI \u0026 Machine Learning",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/midjourney.com"
+                 },
+                 {
+                     "title":  "AI Hub",
+                     "url":  "https://huggingface.co",
+                     "category":  "AI \u0026 Machine Learning",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/huggingface.co"
+                 },
+                 {
+                     "title":  "Microblog",
+                     "url":  "https://x.com",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/x.com"
+                 },
+                 {
+                     "title":  "Forums",
+                     "url":  "https://www.reddit.com",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/reddit.com"
+                 },
+                 {
+                     "title":  "Photo Stream",
+                     "url":  "https://www.instagram.com",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/instagram.com"
+                 },
+                 {
+                     "title":  "Text Stream",
+                     "url":  "https://www.threads.net",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/threads.net"
+                 },
+                 {
+                     "title":  "Professional Network",
+                     "url":  "https://www.linkedin.com",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/linkedin.com"
+                 },
+                 {
+                     "title":  "Idea Board",
+                     "url":  "https://www.pinterest.com",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/pinterest.com"
+                 },
+                 {
+                     "title":  "Mastodon",
+                     "url":  "https://mastodon.social",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/mastodon.social"
+                 },
+                 {
+                     "title":  "Bluesky",
+                     "url":  "https://bsky.app",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/bsky.app"
+                 },
+                 {
+                     "title":  "Quora",
+                     "url":  "https://www.quora.com",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/quora.com"
+                 },
+                 {
+                     "title":  "Tumblr",
+                     "url":  "https://www.tumblr.com",
+                     "category":  "Social",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/tumblr.com"
+                 },
+                 {
+                     "title":  "VK",
+                     "url":  "https://vk.com",
+                     "category":  "Social",
+                     "region":  "EU/RU",
+                     "iconUrl":  "https://icon.horse/icon/vk.com"
+                 },
+                 {
+                     "title":  "Video Hub",
+                     "url":  "https://m.youtube.com",
+                     "category":  "Video \u0026 Entertainment",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/m.youtube.com"
+                 },
+                 {
+                     "title":  "Live Streams",
+                     "url":  "https://m.twitch.tv",
+                     "category":  "Video \u0026 Entertainment",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/m.twitch.tv"
+                 },
+                 {
+                     "title":  "Creator Videos",
+                     "url":  "https://vimeo.com",
+                     "category":  "Video \u0026 Entertainment",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/vimeo.com"
+                 },
+                 {
+                     "title":  "Streaming TV",
+                     "url":  "https://www.hotstar.com",
+                     "category":  "Video \u0026 Entertainment",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/hotstar.com"
+                 },
+                 {
+                     "title":  "Anime Stream",
+                     "url":  "https://www.crunchyroll.com",
+                     "category":  "Video \u0026 Entertainment",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/crunchyroll.com"
+                 },
+                 {
+                     "title":  "Rumble",
+                     "url":  "https://rumble.com",
+                     "category":  "Video \u0026 Entertainment",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/rumble.com"
+                 },
+                 {
+                     "title":  "Odysee",
+                     "url":  "https://odysee.com",
+                     "category":  "Video \u0026 Entertainment",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/odysee.com"
+                 },
+                 {
+                     "title":  "Imgur",
+                     "url":  "https://imgur.com",
+                     "category":  "Video \u0026 Entertainment",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/imgur.com"
+                 },
+                 {
+                     "title":  "Spotify",
+                     "url":  "https://open.spotify.com",
+                     "category":  "Music \u0026 Audio",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/open.spotify.com"
+                 },
+                 {
+                     "title":  "SoundCloud",
+                     "url":  "https://m.soundcloud.com",
+                     "category":  "Music \u0026 Audio",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/m.soundcloud.com"
+                 },
+                 {
+                     "title":  "JioSaavn",
+                     "url":  "https://www.jiosaavn.com",
+                     "category":  "Music \u0026 Audio",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/jiosaavn.com"
+                 },
+                 {
+                     "title":  "Gaana",
+                     "url":  "https://gaana.com",
+                     "category":  "Music \u0026 Audio",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/gaana.com"
+                 },
+                 {
+                     "title":  "Wynk Music",
+                     "url":  "https://wynk.in",
+                     "category":  "Music \u0026 Audio",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/wynk.in"
+                 },
+                 {
+                     "title":  "Pocket Casts",
+                     "url":  "https://play.pocketcasts.com",
+                     "category":  "Music \u0026 Audio",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/play.pocketcasts.com"
+                 },
+                 {
+                     "title":  "Google Maps",
+                     "url":  "https://www.google.com/maps",
+                     "category":  "Navigation \u0026 Maps",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/google.com"
+                 },
+                 {
+                     "title":  "OpenStreetMap",
+                     "url":  "https://www.openstreetmap.org",
+                     "category":  "Navigation \u0026 Maps",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/openstreetmap.org"
+                 },
+                 {
+                     "title":  "Waze",
+                     "url":  "https://www.waze.com/live-map",
+                     "category":  "Navigation \u0026 Maps",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/waze.com"
+                 },
+                 {
+                     "title":  "AccuWeather",
+                     "url":  "https://www.accuweather.com",
+                     "category":  "Weather",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/accuweather.com"
+                 },
+                 {
+                     "title":  "Weather.com",
+                     "url":  "https://weather.com",
+                     "category":  "Weather",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/weather.com"
+                 },
+                 {
+                     "title":  "Windy",
+                     "url":  "https://www.windy.com",
+                     "category":  "Weather",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/windy.com"
+                 },
+                 {
+                     "title":  "Amazon",
+                     "url":  "https://www.amazon.com",
+                     "category":  "Shopping",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/amazon.com"
+                 },
+                 {
+                     "title":  "Flipkart",
+                     "url":  "https://www.flipkart.com",
+                     "category":  "Shopping",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/flipkart.com"
+                 },
+                 {
+                     "title":  "Myntra",
+                     "url":  "https://www.myntra.com",
+                     "category":  "Shopping",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/myntra.com"
+                 },
+                 {
+                     "title":  "AliExpress",
+                     "url":  "https://m.aliexpress.com",
+                     "category":  "Shopping",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/m.aliexpress.com"
+                 },
+                 {
+                     "title":  "eBay",
+                     "url":  "https://m.ebay.com",
+                     "category":  "Shopping",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/m.ebay.com"
+                 },
+                 {
+                     "title":  "Etsy",
+                     "url":  "https://www.etsy.com",
+                     "category":  "Shopping",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/etsy.com"
+                 },
+                 {
+                     "title":  "Walmart",
+                     "url":  "https://www.walmart.com",
+                     "category":  "Shopping",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/walmart.com"
+                 },
+                 {
+                     "title":  "Target",
+                     "url":  "https://www.target.com",
+                     "category":  "Shopping",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/target.com"
+                 },
+                 {
+                     "title":  "IKEA",
+                     "url":  "https://www.ikea.com",
+                     "category":  "Shopping",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/ikea.com"
+                 },
+                 {
+                     "title":  "ASOS",
+                     "url":  "https://www.asos.com",
+                     "category":  "Shopping",
+                     "region":  "UK/Global",
+                     "iconUrl":  "https://icon.horse/icon/asos.com"
+                 },
+                 {
+                     "title":  "Zomato",
+                     "url":  "https://www.zomato.com",
+                     "category":  "Food \u0026 Drink",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/zomato.com"
+                 },
+                 {
+                     "title":  "Swiggy",
+                     "url":  "https://www.swiggy.com",
+                     "category":  "Food \u0026 Drink",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/swiggy.com"
+                 },
+                 {
+                     "title":  "Yelp",
+                     "url":  "https://www.yelp.com",
+                     "category":  "Food \u0026 Drink",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/yelp.com"
+                 },
+                 {
+                     "title":  "Uber Eats",
+                     "url":  "https://www.ubereats.com",
+                     "category":  "Food \u0026 Drink",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/ubereats.com"
+                 },
+                 {
+                     "title":  "DoorDash",
+                     "url":  "https://www.doordash.com",
+                     "category":  "Food \u0026 Drink",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/doordash.com"
+                 },
+                 {
+                     "title":  "Deliveroo",
+                     "url":  "https://deliveroo.co.uk",
+                     "category":  "Food \u0026 Drink",
+                     "region":  "UK/EU",
+                     "iconUrl":  "https://icon.horse/icon/deliveroo.co.uk"
+                 },
+                 {
+                     "title":  "Foodpanda",
+                     "url":  "https://www.foodpanda.com",
+                     "category":  "Food \u0026 Drink",
+                     "region":  "Asia",
+                     "iconUrl":  "https://icon.horse/icon/foodpanda.com"
+                 },
+                 {
+                     "title":  "MakeMyTrip",
+                     "url":  "https://www.makemytrip.com",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/makemytrip.com"
+                 },
+                 {
+                     "title":  "IRCTC",
+                     "url":  "https://www.irctc.co.in",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/irctc.co.in"
+                 },
+                 {
+                     "title":  "Uber",
+                     "url":  "https://m.uber.com",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/m.uber.com"
+                 },
+                 {
+                     "title":  "Ola",
+                     "url":  "https://www.olacabs.com",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/olacabs.com"
+                 },
+                 {
+                     "title":  "Airbnb",
+                     "url":  "https://www.airbnb.com",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/airbnb.com"
+                 },
+                 {
+                     "title":  "Booking.com",
+                     "url":  "https://www.booking.com",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/booking.com"
+                 },
+                 {
+                     "title":  "Skyscanner",
+                     "url":  "https://www.skyscanner.com",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/skyscanner.com"
+                 },
+                 {
+                     "title":  "Agoda",
+                     "url":  "https://www.agoda.com",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "Asia",
+                     "iconUrl":  "https://icon.horse/icon/agoda.com"
+                 },
+                 {
+                     "title":  "Expedia",
+                     "url":  "https://www.expedia.com",
+                     "category":  "Travel \u0026 Transportation",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/expedia.com"
+                 },
+                 {
+                     "title":  "TradingView",
+                     "url":  "https://www.tradingview.com",
+                     "category":  "Finance \u0026 Crypto",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/tradingview.com"
+                 },
+                 {
+                     "title":  "Yahoo Finance",
+                     "url":  "https://finance.yahoo.com",
+                     "category":  "Finance \u0026 Crypto",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/finance.yahoo.com"
+                 },
+                 {
+                     "title":  "Moneycontrol",
+                     "url":  "https://www.moneycontrol.com",
+                     "category":  "Finance \u0026 Crypto",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/moneycontrol.com"
+                 },
+                 {
+                     "title":  "CoinMarketCap",
+                     "url":  "https://coinmarketcap.com",
+                     "category":  "Finance \u0026 Crypto",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/coinmarketcap.com"
+                 },
+                 {
+                     "title":  "CoinGecko",
+                     "url":  "https://www.coingecko.com",
+                     "category":  "Finance \u0026 Crypto",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/coingecko.com"
+                 },
+                 {
+                     "title":  "PayPal",
+                     "url":  "https://www.paypal.com",
+                     "category":  "Finance \u0026 Crypto",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/paypal.com"
+                 },
+                 {
+                     "title":  "Investing.com",
+                     "url":  "https://www.investing.com",
+                     "category":  "Finance \u0026 Crypto",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/investing.com"
+                 },
+                 {
+                     "title":  "ProtonMail",
+                     "url":  "https://mail.proton.me",
+                     "category":  "Email \u0026 Communication",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/mail.proton.me"
+                 },
+                 {
+                     "title":  "Fastmail",
+                     "url":  "https://app.fastmail.com",
+                     "category":  "Email \u0026 Communication",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/app.fastmail.com"
+                 },
+                 {
+                     "title":  "Tuta",
+                     "url":  "https://app.tuta.com",
+                     "category":  "Email \u0026 Communication",
+                     "region":  "EU",
+                     "iconUrl":  "https://icon.horse/icon/app.tuta.com"
+                 },
+                 {
+                     "title":  "Outlook",
+                     "url":  "https://outlook.live.com",
+                     "category":  "Email \u0026 Communication",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/outlook.live.com"
+                 },
+                 {
+                     "title":  "Notion",
+                     "url":  "https://www.notion.so",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/notion.so"
+                 },
+                 {
+                     "title":  "Google Keep",
+                     "url":  "https://keep.google.com",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/keep.google.com"
+                 },
+                 {
+                     "title":  "Trello",
+                     "url":  "https://trello.com",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/trello.com"
+                 },
+                 {
+                     "title":  "Todoist",
+                     "url":  "https://todoist.com/app",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/todoist.com"
+                 },
+                 {
+                     "title":  "Evernote",
+                     "url":  "https://www.evernote.com",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/evernote.com"
+                 },
+                 {
+                     "title":  "Dropbox",
+                     "url":  "https://www.dropbox.com",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/dropbox.com"
+                 },
+                 {
+                     "title":  "Google Docs",
+                     "url":  "https://docs.google.com",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/docs.google.com"
+                 },
+                 {
+                     "title":  "Google Sheets",
+                     "url":  "https://sheets.google.com",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/sheets.google.com"
+                 },
+                 {
+                     "title":  "Simplenote",
+                     "url":  "https://app.simplenote.com",
+                     "category":  "Productivity \u0026 Workspace",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/app.simplenote.com"
+                 },
+                 {
+                     "title":  "Figma",
+                     "url":  "https://www.figma.com",
+                     "category":  "Design \u0026 Creatives",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/figma.com"
+                 },
+                 {
+                     "title":  "Canva",
+                     "url":  "https://www.canva.com",
+                     "category":  "Design \u0026 Creatives",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/canva.com"
+                 },
+                 {
+                     "title":  "Photopea",
+                     "url":  "https://www.photopea.com",
+                     "category":  "Design \u0026 Creatives",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/photopea.com"
+                 },
+                 {
+                     "title":  "Dribbble",
+                     "url":  "https://dribbble.com",
+                     "category":  "Design \u0026 Creatives",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/dribbble.com"
+                 },
+                 {
+                     "title":  "Behance",
+                     "url":  "https://www.behance.net",
+                     "category":  "Design \u0026 Creatives",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/behance.net"
+                 },
+                 {
+                     "title":  "Excalidraw",
+                     "url":  "https://excalidraw.com",
+                     "category":  "Design \u0026 Creatives",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/excalidraw.com"
+                 },
+                 {
+                     "title":  "GitHub",
+                     "url":  "https://github.com",
+                     "category":  "Developer Tools",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/github.com"
+                 },
+                 {
+                     "title":  "GitLab",
+                     "url":  "https://gitlab.com",
+                     "category":  "Developer Tools",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/gitlab.com"
+                 },
+                 {
+                     "title":  "Stack Overflow",
+                     "url":  "https://stackoverflow.com",
+                     "category":  "Developer Tools",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/stackoverflow.com"
+                 },
+                 {
+                     "title":  "CodePen",
+                     "url":  "https://codepen.io",
+                     "category":  "Developer Tools",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/codepen.io"
+                 },
+                 {
+                     "title":  "The Verge",
+                     "url":  "https://www.theverge.com",
+                     "category":  "Technology",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/theverge.com"
+                 },
+                 {
+                     "title":  "TechCrunch",
+                     "url":  "https://techcrunch.com",
+                     "category":  "Technology",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/techcrunch.com"
+                 },
+                 {
+                     "title":  "Hacker News",
+                     "url":  "https://news.ycombinator.com",
+                     "category":  "Technology",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/news.ycombinator.com"
+                 },
+                 {
+                     "title":  "Wired",
+                     "url":  "https://www.wired.com",
+                     "category":  "Technology",
+                     "region":  "US/UK",
+                     "iconUrl":  "https://icon.horse/icon/wired.com"
+                 },
+                 {
+                     "title":  "Ars Technica",
+                     "url":  "https://arstechnica.com",
+                     "category":  "Technology",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/arstechnica.com"
+                 },
+                 {
+                     "title":  "BBC News",
+                     "url":  "https://www.bbc.com/news",
+                     "category":  "News \u0026 Journals",
+                     "region":  "UK",
+                     "iconUrl":  "https://icon.horse/icon/bbc.com"
+                 },
+                 {
+                     "title":  "NDTV",
+                     "url":  "https://www.ndtv.com",
+                     "category":  "News \u0026 Journals",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/ndtv.com"
+                 },
+                 {
+                     "title":  "The Times of India",
+                     "url":  "https://timesofindia.indiatimes.com",
+                     "category":  "News \u0026 Journals",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/timesofindia.indiatimes.com"
+                 },
+                 {
+                     "title":  "Reuters",
+                     "url":  "https://www.reuters.com",
+                     "category":  "News \u0026 Journals",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/reuters.com"
+                 },
+                 {
+                     "title":  "Al Jazeera",
+                     "url":  "https://www.aljazeera.com",
+                     "category":  "News \u0026 Journals",
+                     "region":  "Middle East/Global",
+                     "iconUrl":  "https://icon.horse/icon/aljazeera.com"
+                 },
+                 {
+                     "title":  "NPR",
+                     "url":  "https://www.npr.org",
+                     "category":  "News \u0026 Journals",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/npr.org"
+                 },
+                 {
+                     "title":  "The Guardian",
+                     "url":  "https://www.theguardian.com",
+                     "category":  "News \u0026 Journals",
+                     "region":  "UK",
+                     "iconUrl":  "https://icon.horse/icon/theguardian.com"
+                 },
+                 {
+                     "title":  "Washington Post",
+                     "url":  "https://www.washingtonpost.com",
+                     "category":  "News \u0026 Journals",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/washingtonpost.com"
+                 },
+                 {
+                     "title":  "Bloomberg",
+                     "url":  "https://www.bloomberg.com",
+                     "category":  "News \u0026 Journals",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/bloomberg.com"
+                 },
+                 {
+                     "title":  "ESPN",
+                     "url":  "https://www.espn.com",
+                     "category":  "Sports",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/espn.com"
+                 },
+                 {
+                     "title":  "Cricbuzz",
+                     "url":  "https://m.cricbuzz.com",
+                     "category":  "Sports",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/m.cricbuzz.com"
+                 },
+                 {
+                     "title":  "Bleacher Report",
+                     "url":  "https://bleacherreport.com",
+                     "category":  "Sports",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/bleacherreport.com"
+                 },
+                 {
+                     "title":  "Sky Sports",
+                     "url":  "https://www.skysports.com",
+                     "category":  "Sports",
+                     "region":  "UK",
+                     "iconUrl":  "https://icon.horse/icon/skysports.com"
+                 },
+                 {
+                     "title":  "Goal.com",
+                     "url":  "https://www.goal.com",
+                     "category":  "Sports",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/goal.com"
+                 },
+                 {
+                     "title":  "Goodreads",
+                     "url":  "https://www.goodreads.com",
+                     "category":  "Books \u0026 Reading",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/goodreads.com"
+                 },
+                 {
+                     "title":  "Wikipedia",
+                     "url":  "https://en.m.wikipedia.org",
+                     "category":  "Books \u0026 Reading",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/en.m.wikipedia.org"
+                 },
+                 {
+                     "title":  "Internet Archive",
+                     "url":  "https://archive.org",
+                     "category":  "Books \u0026 Reading",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/archive.org"
+                 },
+                 {
+                     "title":  "Project Gutenberg",
+                     "url":  "https://www.gutenberg.org",
+                     "category":  "Books \u0026 Reading",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/gutenberg.org"
+                 },
+                 {
+                     "title":  "Wattpad",
+                     "url":  "https://www.wattpad.com",
+                     "category":  "Books \u0026 Reading",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/wattpad.com"
+                 },
+                 {
+                     "title":  "Substack",
+                     "url":  "https://substack.com",
+                     "category":  "Books \u0026 Reading",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/substack.com"
+                 },
+                 {
+                     "title":  "Medium",
+                     "url":  "https://medium.com",
+                     "category":  "Books \u0026 Reading",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/medium.com"
+                 },
+                 {
+                     "title":  "Coursera",
+                     "url":  "https://www.coursera.org",
+                     "category":  "Education",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/coursera.org"
+                 },
+                 {
+                     "title":  "Duolingo",
+                     "url":  "https://www.duolingo.com",
+                     "category":  "Education",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/duolingo.com"
+                 },
+                 {
+                     "title":  "Khan Academy",
+                     "url":  "https://www.khanacademy.org",
+                     "category":  "Education",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/khanacademy.org"
+                 },
+                 {
+                     "title":  "edX",
+                     "url":  "https://www.edx.org",
+                     "category":  "Education",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/edx.org"
+                 },
+                 {
+                     "title":  "Quizlet",
+                     "url":  "https://quizlet.com",
+                     "category":  "Education",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/quizlet.com"
+                 },
+                 {
+                     "title":  "Codecademy",
+                     "url":  "https://www.codecademy.com",
+                     "category":  "Education",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/codecademy.com"
+                 },
+                 {
+                     "title":  "IGN",
+                     "url":  "https://www.ign.com",
+                     "category":  "Gaming",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/ign.com"
+                 },
+                 {
+                     "title":  "BoardGameGeek",
+                     "url":  "https://boardgamegeek.com",
+                     "category":  "Gaming",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/boardgamegeek.com"
+                 },
+                 {
+                     "title":  "GameSpot",
+                     "url":  "https://www.gamespot.com",
+                     "category":  "Gaming",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/gamespot.com"
+                 },
+                 {
+                     "title":  "Chess.com",
+                     "url":  "https://www.chess.com",
+                     "category":  "Gaming",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/chess.com"
+                 },
+                 {
+                     "title":  "MyFitnessPal",
+                     "url":  "https://www.myfitnesspal.com",
+                     "category":  "Health \u0026 Fitness",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/myfitnesspal.com"
+                 },
+                 {
+                     "title":  "Strava",
+                     "url":  "https://www.strava.com",
+                     "category":  "Health \u0026 Fitness",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/strava.com"
+                 },
+                 {
+                     "title":  "WebMD",
+                     "url":  "https://www.webmd.com",
+                     "category":  "Health \u0026 Fitness",
+                     "region":  "US",
+                     "iconUrl":  "https://icon.horse/icon/webmd.com"
+                 },
+                 {
+                     "title":  "Practo",
+                     "url":  "https://www.practo.com",
+                     "category":  "Health \u0026 Fitness",
+                     "region":  "India",
+                     "iconUrl":  "https://icon.horse/icon/practo.com"
+                 },
+                 {
+                     "title":  "DuckDuckGo",
+                     "url":  "https://duckduckgo.com",
+                     "category":  "Utilities",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/duckduckgo.com"
+                 },
+                 {
+                     "title":  "Speedtest",
+                     "url":  "https://www.speedtest.net",
+                     "category":  "Utilities",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/speedtest.net"
+                 },
+                 {
+                     "title":  "DeepL",
+                     "url":  "https://www.deepl.com/translator",
+                     "category":  "Utilities",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/deepl.com"
+                 },
+                 {
+                     "title":  "Google Translate",
+                     "url":  "https://translate.google.com",
+                     "category":  "Utilities",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/translate.google.com"
+                 },
+                 {
+                     "title":  "Bitwarden",
+                     "url":  "https://vault.bitwarden.com",
+                     "category":  "Utilities",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/vault.bitwarden.com"
+                 },
+                 {
+                     "title":  "VirusTotal",
+                     "url":  "https://www.virustotal.com",
+                     "category":  "Utilities",
+                     "region":  "Global",
+                     "iconUrl":  "https://icon.horse/icon/virustotal.com"
+                 }
+             ]
 }
-

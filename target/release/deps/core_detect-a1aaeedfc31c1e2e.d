@@ -1,0 +1,11 @@
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\core_detect-a1aaeedfc31c1e2e.d: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\macros.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\arch\x86.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\os\x86.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\cache.rs
+
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\libcore_detect-a1aaeedfc31c1e2e.rlib: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\macros.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\arch\x86.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\os\x86.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\cache.rs
+
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\libcore_detect-a1aaeedfc31c1e2e.rmeta: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\macros.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\arch\x86.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\os\x86.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\cache.rs
+
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\lib.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\macros.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\arch\x86.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\os\x86.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\core_detect-1.0.0\src\cache.rs:

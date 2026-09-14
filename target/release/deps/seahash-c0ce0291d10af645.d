@@ -1,0 +1,11 @@
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\seahash-c0ce0291d10af645.d: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\buffer.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\helper.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\reference.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\stream.rs
+
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\libseahash-c0ce0291d10af645.rlib: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\buffer.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\helper.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\reference.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\stream.rs
+
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\libseahash-c0ce0291d10af645.rmeta: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\buffer.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\helper.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\reference.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\stream.rs
+
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\lib.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\buffer.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\helper.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\reference.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\seahash-4.1.0\src\stream.rs:

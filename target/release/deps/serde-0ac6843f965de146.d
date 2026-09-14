@@ -1,0 +1,14 @@
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\serde-0ac6843f965de146.d: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\integer128.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\mod.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\de.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\ser.rs C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\build\serde-7eae624fd9e9d6db\out/private.rs
+
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\libserde-0ac6843f965de146.rlib: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\integer128.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\mod.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\de.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\ser.rs C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\build\serde-7eae624fd9e9d6db\out/private.rs
+
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\libserde-0ac6843f965de146.rmeta: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\integer128.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\mod.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\de.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\ser.rs C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\build\serde-7eae624fd9e9d6db\out/private.rs
+
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\lib.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\integer128.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\mod.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\de.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\ser.rs:
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\build\serde-7eae624fd9e9d6db\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\HUNTER\\.gemini\\antigravity-ide\\scratch\\Nyvron-Rules\\target\\release\\build\\serde-7eae624fd9e9d6db\\out

@@ -1,0 +1,10 @@
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\compression_core-a0d29f253ef66290.d: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\level.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\unshared.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\util.rs
+
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\libcompression_core-a0d29f253ef66290.rlib: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\level.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\unshared.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\util.rs
+
+C:\Users\HUNTER\.gemini\antigravity-ide\scratch\Nyvron-Rules\target\release\deps\libcompression_core-a0d29f253ef66290.rmeta: C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\lib.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\level.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\unshared.rs C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\util.rs
+
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\lib.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\level.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\unshared.rs:
+C:\Users\HUNTER\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\compression-core-0.4.33\src\util.rs:

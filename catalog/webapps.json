@@ -1,29 +1,29 @@
 {
   "apps": [
-    { "title": "ChatGPT", "url": "https://chatgpt.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/chatgpt.webp" },
-    { "title": "Claude", "url": "https://claude.ai", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/claude.webp" },
-    { "title": "Perplexity", "url": "https://www.perplexity.ai", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/perplexity.webp" },
-    { "title": "Google Gemini", "url": "https://gemini.google.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/gemini.webp" },
-    { "title": "Midjourney", "url": "https://www.midjourney.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/midjourney.webp" },
-    { "title": "Hugging Face", "url": "https://huggingface.co", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/huggingface.webp" },
+    { "title": "AI Chat", "url": "https://chatgpt.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/chatgpt.webp" },
+    { "title": "Smart Assistant", "url": "https://claude.ai", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/claude.webp" },
+    { "title": "AI Search", "url": "https://www.perplexity.ai", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/perplexity.webp" },
+    { "title": "AI Studio", "url": "https://gemini.google.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/gemini.webp" },
+    { "title": "AI Art", "url": "https://www.midjourney.com", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/midjourney.webp" },
+    { "title": "AI Hub", "url": "https://huggingface.co", "category": "AI & Machine Learning", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/huggingface.webp" },
 
-    { "title": "X (Twitter)", "url": "https://x.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/twitter.webp" },
-    { "title": "Reddit", "url": "https://www.reddit.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/reddit.webp" },
-    { "title": "Instagram", "url": "https://www.instagram.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/instagram.webp" },
-    { "title": "Threads", "url": "https://www.threads.net", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/threads.webp" },
-    { "title": "LinkedIn", "url": "https://www.linkedin.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/linkedin.webp" },
-    { "title": "Pinterest", "url": "https://www.pinterest.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/pinterest.webp" },
+    { "title": "Microblog", "url": "https://x.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/twitter.webp" },
+    { "title": "Forums", "url": "https://www.reddit.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/reddit.webp" },
+    { "title": "Photo Stream", "url": "https://www.instagram.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/instagram.webp" },
+    { "title": "Text Stream", "url": "https://www.threads.net", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/threads.webp" },
+    { "title": "Professional Network", "url": "https://www.linkedin.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/linkedin.webp" },
+    { "title": "Idea Board", "url": "https://www.pinterest.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/pinterest.webp" },
     { "title": "Mastodon", "url": "https://mastodon.social", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/mastodon.webp" },
     { "title": "Bluesky", "url": "https://bsky.app", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/bluesky.webp" },
     { "title": "Quora", "url": "https://www.quora.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/quora.webp" },
     { "title": "Tumblr", "url": "https://www.tumblr.com", "category": "Social", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/tumblr.webp" },
     { "title": "VK", "url": "https://vk.com", "category": "Social", "region": "EU/RU", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/vk.webp" },
 
-    { "title": "YouTube", "url": "https://m.youtube.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/youtube.webp" },
-    { "title": "Twitch", "url": "https://m.twitch.tv", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/twitch.webp" },
-    { "title": "Vimeo", "url": "https://vimeo.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/vimeo.webp" },
-    { "title": "Hotstar", "url": "https://www.hotstar.com", "category": "Video & Entertainment", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/hotstar.webp" },
-    { "title": "Crunchyroll", "url": "https://www.crunchyroll.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/crunchyroll.webp" },
+    { "title": "Video Hub", "url": "https://m.youtube.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/youtube.webp" },
+    { "title": "Live Streams", "url": "https://m.twitch.tv", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/twitch.webp" },
+    { "title": "Creator Videos", "url": "https://vimeo.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/vimeo.webp" },
+    { "title": "Streaming TV", "url": "https://www.hotstar.com", "category": "Video & Entertainment", "region": "India", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/hotstar.webp" },
+    { "title": "Anime Stream", "url": "https://www.crunchyroll.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/crunchyroll.webp" },
     { "title": "Rumble", "url": "https://rumble.com", "category": "Video & Entertainment", "region": "US", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/rumble.webp" },
     { "title": "Odysee", "url": "https://odysee.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/odysee.webp" },
     { "title": "Imgur", "url": "https://imgur.com", "category": "Video & Entertainment", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/imgur.webp" },
@@ -162,3 +162,4 @@
     { "title": "VirusTotal", "url": "https://www.virustotal.com", "category": "Utilities", "region": "Global", "iconUrl": "https://cdn.jsdelivr.net/gh/Hardik5382/Nyvron-Rules@main/icons/virustotal.webp" }
   ]
 }
+

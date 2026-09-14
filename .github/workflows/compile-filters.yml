@@ -16,22 +16,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Compiler Dependencies
-        run: npm install adblock-rs@0.13.3
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
 
       - name: Build latest rules
-        run: node tools/compile.js
+        run: cargo run --release
 
       - name: Commit updated binary
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add cdn/v1/filters.bin
+          git add cdn/v1/filters.bin cdn/v1/filters.bin.sha256
           git diff --cached --quiet && exit 0
           git commit -m "chore: Update compiled filters (adblock-rs@0.13.3)"
           git push origin main

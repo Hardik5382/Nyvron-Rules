@@ -1,4 +1,4 @@
-use adblock::lists::{parse_filters, ParseOptions};
+
 use adblock::Engine;
 use sha2::{Digest, Sha256};
 use std::fs::File;
@@ -10,8 +10,8 @@ const UBLOCK_FILTERS_URL: &str = "https://ublockorigin.github.io/uAssets/filters
 const UBLOCK_QUICK_FIXES_URL: &str =
     "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt";
 
-const OUTPUT_PATH: &str = "v2/latest-v0.12.5.nyv";
-const SIGNATURE_PATH: &str = "v2/latest-v0.12.5.nyv.sha256";
+const OUTPUT_PATH: &str = "cdn/v1/filters.bin";
+const SIGNATURE_PATH: &str = "cdn/v1/filters.bin.sha256";
 const BINARY_MAGIC: &[u8; 8] = b"NYVRONv2";
 
 #[tokio::main]
@@ -25,7 +25,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let ad_rules = collect_rules(&[&easylist, &ublock_filters, &ublock_quick_fixes]);
     let tracker_rules = collect_rules(&[&easyprivacy]);
 
-    let (ad_network, ad_cosmetic) = parse_filters(&ad_rules, false, ParseOptions::default());
+    
     let (tracker_network, tracker_cosmetic) =
         parse_filters(&tracker_rules, false, ParseOptions::default());
 
@@ -33,8 +33,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         (ad_network.len() + ad_cosmetic.len() + tracker_network.len() + tracker_cosmetic.len())
             as u64;
 
-    let ad_engine = Engine::from_rules(&ad_rules, ParseOptions::default());
-    let tracker_engine = Engine::from_rules(&tracker_rules, ParseOptions::default());
+    let ad_engine = Engine::new_with_list_text(ad_rules.join("`n"));
+    let tracker_engine = Engine::new_with_list_text(tracker_rules.join("`n"));
 
     let ad_payload = ad_engine.serialize();
     let tracker_payload = tracker_engine.serialize();
@@ -119,3 +119,5 @@ fn encode_engine_binary(
     }
     output
 }
+
+
